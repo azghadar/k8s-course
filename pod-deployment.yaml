@@ -12,7 +12,7 @@ spec:
     image: yanivomc/spring-music:latest
     ports:
     - containerPort: 8080
-  volumeMounts:
+    volumeMounts:
     - name: redis-persistent-storage
       mountPath: /app/data
   volumes:
