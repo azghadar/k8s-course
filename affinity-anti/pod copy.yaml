@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: redis-cache
+  name: redis-cache1
   labels:
     cache: redis
 spec:
