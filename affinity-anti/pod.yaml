@@ -5,6 +5,7 @@ metadata:
   labels:
     cache: redis
 spec:
+  replicas: 2
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
