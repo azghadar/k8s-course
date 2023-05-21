@@ -15,5 +15,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; curl ifconfig.me
+            - date; curl https://ifconfig.me
           restartPolicy: OnFailure
