@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: hello
-            image: alpine:latest
+            image: nginx:latest
             imagePullPolicy: IfNotPresent
             command:
             - /bin/sh
