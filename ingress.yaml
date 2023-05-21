@@ -52,7 +52,7 @@ spec:
       port: 80
       targetPort: 80
   clusterIP: 100.64.171.241
-  type: LoadBalancer
+  type: ClusterIP
 ---
 apiVersion: v1
 kind: Service
@@ -66,4 +66,4 @@ spec:
       port: 80
       targetPort: 80
   clusterIP: 100.64.171.242
-  type: LoadBalancer
+  type: ClusterIP
