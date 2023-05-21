@@ -67,3 +67,30 @@ spec:
       targetPort: 80
   clusterIP: 100.64.171.242
   type: ClusterIP
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: animals
+  rules:
+  - http:
+      paths:
+      - path: /moose
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-moose
+            port:
+              number: 80
+      - path: /bear
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-bear
+            port:
+              number: 80
