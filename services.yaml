@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: yanivomc
-        image: yanivomc/spring-music:latest
+        image: yanivomc/spring-music:ecs
         ports:
         - containerPort: 8080
 
