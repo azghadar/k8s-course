@@ -46,7 +46,7 @@ metadata:
   name: my-service
 spec:
   selector:
-    app: svc
+    app: animals
   ports:
     - protocol: TCP
       port: 80
