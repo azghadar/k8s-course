@@ -76,7 +76,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: animals
+  ingressClassName: ingress-nginx-controller
   rules:
   - http:
       paths:
