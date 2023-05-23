@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-{{ .Chart.Version }}
+  labels:
+{{- include "spring.labels" . | nindent 3}}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+{{- include "spring.labels" . | nindent 6}}
+  template:
+    metadata:
+      labels:
+{{- include "spring.labels" . | nindent 8}}
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.deployment.image }}
+        ports:
+        - containerPort: {{ .Values.service.targetPort }}
